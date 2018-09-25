@@ -17,17 +17,8 @@ namespace App
             try
             {
                 var timer = new SortTimer();
-
-                decimal hybridSortExecTime = 0, quickSortExecTime = 0;
-                int k = 6;
-
-                //quickSortExecTime = timer.GetExecutionTimeFromQuickSort();
-                //Console.WriteLine($"QuickSort time is {quickSortExecTime}");
-
-                hybridSortExecTime = timer.GetExecutionTimeFromHybridSort(k);
-                Console.WriteLine($"HybridSort time is {hybridSortExecTime} for k = {k}");
-
-                //Console.WriteLine($"Final exec time for hybrid sorting is {hybridSortExecTime} and k is {k}");
+                int n = timer.GetNAndPrintExecTimes();
+                Console.WriteLine($"Final n = {n}");
 
                 Console.WriteLine("That's all");
             }   

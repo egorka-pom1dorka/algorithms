@@ -9,7 +9,7 @@ namespace Lab01
     public class ArrayGenerator
     {
 
-        private const int ARRAY_LENGTH = 100_000;
+        private const int ARRAY_LENGTH = 5_000_000; //50 * 100_000
         private const int MIN_NUMBER_VALUE = 1;
         private const int MAX_NUMBER_VALUE = 1_000_000_000;
 

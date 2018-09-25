@@ -1,0 +1,7 @@
+Execution time for quicksort is 29
+Execution time for hybridsort (n = 256) is 81
+Execution time for hybridsort (n = 128) is 50
+Execution time for hybridsort (n = 64) is 35
+Execution time for hybridsort (n = 32) is 29
+Execution time for hybridsort (n = 16) is 27
+Final n = 16

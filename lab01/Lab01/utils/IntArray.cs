@@ -7,50 +7,47 @@ using System.Threading.Tasks;
 
 namespace Lab01
 {
-    public class IntArray
+    public static class IntArray
     {
 
-        private const int MAX_ARRAY_LENGTH = 100_000;
+        public const int ARRAY_LENGTH = 100_000;
+        public const int ARRAYS_AMOUNT= 50;
 
-        private int[] numbers;
-
-        public int[] getNumbers()
+        public static void appendGeneratedNumbersInFile()
         {
-            return numbers;
+            int[] numbers = generateRandomNumbers();
+            writeInFile(numbers);
         }
 
-        public void generateRandomNumbers()
+        private static int[] generateRandomNumbers()
         {
             var generator = new ArrayGenerator();
             generator.generate();
-            numbers = generator.GetArray();
+            return generator.GetArray();
         }
 
-        public void writeInFile()
+        private static void writeInFile(int[] numbers)
         {
             NumbersWriter.Write(numbers);
         }
 
-        public static void generateAndWriteArray()
-        {
-            var intarr = new IntArray();
-            intarr.generateRandomNumbers();
-            intarr.writeInFile();
-        }
-
-        public static int[] GetArrayFromFile()
+        public static List<int[]> GetArraysFromFile()
         {
             string[] strings = NumbersReader.Read().Split(' ');
-            var intarr = new IntArray();
-            var numbers = intarr.getNumbers();
-            numbers = new int[MAX_ARRAY_LENGTH];
 
-            for (int i = 0; i < MAX_ARRAY_LENGTH; i++)
+            List<int[]> arrays = new List<int[]>();
+
+            for(int i = 1; i <= ARRAYS_AMOUNT; i++)
             {
-                int.TryParse(strings[i], out numbers[i]);
+                int[] numbers = new int[ARRAY_LENGTH];
+                for (int j = 0; j < ARRAY_LENGTH; j++)
+                {
+                    int.TryParse(strings[i * j], out numbers[j]);
+                }
+                arrays.Add(numbers);
             }
 
-            return numbers;
+            return arrays;
         }
 
     }
