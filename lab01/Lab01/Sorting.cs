@@ -82,8 +82,71 @@ namespace Lab01
             }
         }
 
-        public static void MergeSort(int[] arr, int start, int end)
+        public static void MergeSort(int[] arr)
         {
+            MergeSort(arr, 0, arr.Length - 1);
+        }
+
+        private static void MergeSort(int[] arr, int start, int end)
+        {
+            if(start < end)
+            {
+                int middle = (start + end) / 2;
+
+                MergeSort(arr, start, middle);
+                MergeSort(arr, middle + 1, end);
+
+                Merge(arr, middle, start, end);
+            }
+        }
+
+        private static void Merge(int[] arr, int middle, int start, int end)
+        {
+            int leftLength = middle - start + 1;
+            int rightLength = end - middle;
+
+            int[] left = new int[leftLength];
+            int[] right = new int[rightLength];
+
+            int i, j;
+            for (i = 0; i < leftLength; i++)
+            {
+                left[i] = arr[start + i];
+            }
+
+            for (i = 0; i < rightLength; i++)
+            {
+                right[i] = arr[i + middle + 1];
+            }
+
+            int k = start;
+            i = 0; j = 0;
+            while (i < leftLength && j < rightLength)
+            {
+                if (left[i] < right[j])
+                {
+                    arr[k] = left[i];
+                    i++;
+                }
+                else
+                {
+                    arr[k] = right[j];
+                    j++;
+                }
+                k++;
+            }
+
+            while (i < leftLength)
+            {
+                arr[k] = left[i];
+                i++; k++;
+            }
+
+            while (j < rightLength)
+            {
+                arr[k] = right[j];
+                j++; k++;
+            }
 
         }
 

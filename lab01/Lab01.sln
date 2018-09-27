@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Lab01\Sorting.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{B39795C5-FB38-4598-B9A5-EF9B599918E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelSorting", "ClassLibrary1\ParallelSorting.csproj", "{20EA42B3-5F29-4535-9753-6469352F3D27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B39795C5-FB38-4598-B9A5-EF9B599918E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B39795C5-FB38-4598-B9A5-EF9B599918E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B39795C5-FB38-4598-B9A5-EF9B599918E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20EA42B3-5F29-4535-9753-6469352F3D27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20EA42B3-5F29-4535-9753-6469352F3D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20EA42B3-5F29-4535-9753-6469352F3D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20EA42B3-5F29-4535-9753-6469352F3D27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
