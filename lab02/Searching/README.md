@@ -4,7 +4,7 @@
 ![Результаты](https://github.com/ArtimenyaEgor/algorithms/raw/master/lab02/Searching/search_totals.png)
 
 ## Binary search tree
-#### My tree (with 1 in left corner)
+#### My tree (with number 1 in left corner)
 ![Tree](https://github.com/ArtimenyaEgor/algorithms/raw/master/lab02/Searching/tree.PNG)
 #### How it looks in console
 ![Console tree](https://github.com/ArtimenyaEgor/algorithms/raw/master/lab02/Searching/console_tree.png)
