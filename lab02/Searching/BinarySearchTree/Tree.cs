@@ -82,11 +82,49 @@ namespace BinarySearchTree
                 return Find(node.right, key);
         }
 
+        public Node InsertInRoot(int key)
+        {
+            return InsertInRoot(root, key);
+        }
+
+        private Node InsertInRoot(Node node, int key)
+        {
+            if (root == null)
+            {
+                root = new Node(key);
+                return root;
+            }
+
+            else if (key < root.data)
+            {
+                Node left = root.left;
+                Node right = root;
+                root.left = null;
+                root = new Node(key);
+                root.right = right;
+                root.left = left;
+                return root;
+            }
+            else
+            {
+                Node right = root.right;
+                Node left = root;
+                root.right = null;
+                root = new Node(key);
+                root.right = right;
+                root.left = left;
+                return root;
+            }
+        }
+
         public Node RotateRight(Node node)
         {
             if (node.left == null)
                 return node;
             Node left = node.left;
+
+            if (IsRoot(node))
+                return InsertInRoot(node.data);
 
             if (node.parent.left.data == node.data)
                 node.parent.left = left;
@@ -105,6 +143,9 @@ namespace BinarySearchTree
 
             Node right = node.right;
 
+            if (IsRoot(node))
+                return InsertInRoot(node.data);
+
             if (node.parent.left.data == node.data)
                 node.parent.left = right;
             else
@@ -113,6 +154,11 @@ namespace BinarySearchTree
             node.right = right.left;
             right.left = node;
             return right;
+        }
+
+        private bool IsRoot(Node node)
+        {
+            return node.parent == null;
         }
 
     }

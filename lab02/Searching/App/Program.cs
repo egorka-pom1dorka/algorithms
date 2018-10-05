@@ -28,13 +28,14 @@ namespace App
             tree.Insert(7);
             tree.Insert(10);
 
-            //tree.Print();
-            
+            tree.Print();
+
             //tree.RotateRight(tree.Find(4));
             //Console.WriteLine(); Console.WriteLine();
             //tree.Print();
 
-            tree.RotateLeft(tree.Find(4));
+            //tree.RotateLeft(tree.Find(4));
+            //tree.InsertInRoot(9);
             Console.WriteLine(); Console.WriteLine();
             tree.Print();
 
