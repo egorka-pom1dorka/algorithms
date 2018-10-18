@@ -17,17 +17,17 @@ namespace App
         {
             try
             {
-                var employees = ObjectsHolders.GetEmployees();
-                var correspondences = ObjectsHolders.GetCorrespondences();
-                var employeesSalaries = EmployeeSalaryWorker.Combine(employees, correspondences);
+                //var employees = ObjectsHolders.GetEmployees();
+                //var correspondences = ObjectsHolders.GetCorrespondences();
+                //var employeesSalaries = EmployeeSalaryWorker.Combine(employees, correspondences);
 
-                PrintSalaries(employeesSalaries);
-                employeesSalaries = CombineSorting.SortByAge(employeesSalaries);
-                PrintSalaries(employeesSalaries);
+                //PrintSalaries(employeesSalaries);
+                //employeesSalaries = CombineSorting.SortByAge(employeesSalaries);
+                //PrintSalaries(employeesSalaries);
 
-                EmployeeSalaryWorker.Split(employeesSalaries, ref employees, ref correspondences);
-                PrintEmployees(employees);
-                PrintCorrespondences(correspondences);
+                //EmployeeSalaryWorker.Split(employeesSalaries, ref employees, ref correspondences);
+                //PrintEmployees(employees);
+                //PrintCorrespondences(correspondences);
 
                 Console.WriteLine("That's all");
             }

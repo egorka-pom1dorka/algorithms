@@ -25,7 +25,7 @@ namespace Lab01.utils
             Console.WriteLine($"Execution time for quicksort is {quicksortExecTime}");
             
             double hybridSortExecTime = 1_000_000;
-            int n = 256;
+            int n = 128;
 
             for (; hybridSortExecTime >= quicksortExecTime; n/=2)
             {
