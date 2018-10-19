@@ -23,7 +23,7 @@ namespace lab03.SecondTask
         
         private KeyValue[] data;
         private int filled;
-        private int stepsForAddingAmount = 1;
+        private int stepsForAddingAmount;
 
         private const int PRIME_NUMBER = 827;
 
@@ -50,7 +50,8 @@ namespace lab03.SecondTask
         {
             if (IsFull())
                 throw new Exception("HashTable is full");
-            
+
+            stepsForAddingAmount = 1;
             int index = FindPosition(key);
             data[index] = new KeyValue(key, value);
             filled++;
