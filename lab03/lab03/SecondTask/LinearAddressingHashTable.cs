@@ -102,5 +102,13 @@ namespace lab03.SecondTask
             return index;
         }
 
+        public void Show()
+        {
+            for (int i = 0; i < data.Length; i++)
+            {
+                Console.WriteLine($"Index: {i}, key: {data[i].key}, value: {data[i].value}");
+            }
+        }
+
     }
 }
