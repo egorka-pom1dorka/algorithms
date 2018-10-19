@@ -14,6 +14,7 @@ namespace Client
         {
             try
             {
+
                 Console.WriteLine("Task 1: finding min number of max lists");
                 HashTableConstsComparator.ShowResults();
 

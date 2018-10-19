@@ -45,7 +45,7 @@ namespace lab03.FirstTask
         private static void FillTable(HashTable table, int[] numbers)
         {
             for (int i = 0; i < numbers.Length; i++)
-                table.Add(i, numbers[i]);
+                table.Add(numbers[i], numbers[i]);
         }
 
     }

@@ -37,7 +37,7 @@ namespace lab03.SecondTask
             int max = 1;
             for (int i = 0; i < numbers.Length; i++)
             {
-                table.Add(i, numbers[i]);
+                table.Add(numbers[i], numbers[i]);
                 max = table.GetSteps() > max ? table.GetSteps() : max;
             }
             return max;
