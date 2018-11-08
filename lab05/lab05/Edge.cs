@@ -29,5 +29,23 @@ namespace lab05
         public int GetWeight()
             => weight;
 
+        public bool Equal(Edge edge)
+        {
+            var number1 = edge.GetFirstVertex().GetNumber();
+            var number2 = edge.GetSecondVertex().GetNumber();
+            return vertex1.GetNumber() == number1 && vertex2.GetNumber() == number2 
+                || vertex2.GetNumber() == number1 && vertex1.GetNumber() == number2;
+        }
+
+        public bool In(List<Edge> edges)
+        {
+            foreach (var edge in edges)
+            {
+                if (this.Equal(edge))
+                    return true;
+            }
+            return false;
+        }
+
     }
 }

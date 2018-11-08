@@ -43,25 +43,18 @@ namespace lab05
             if (vertexesAmount + 1 >= MAX_VERTEXES_AMOUNT)
                 throw new Exception();
 
-            if (matrix[i][i] == null)
-                vertexesAmount++;
-
-            if (matrix[j][j] == null)
-                vertexesAmount++;
-
-            for (int k = 0; k < vertexesAmount; k++)
-            {
-                if (matrix[k][i] == null)
-                    matrix[k][i] = 0;
-            }
-
-            for (int k = 0; k < vertexesAmount; k++)
-            {
-                if (matrix[k][j] == null)
-                    matrix[k][j] = 0;
-            }
-
+            CreateVertexIfNeeded(i);
+            CreateVertexIfNeeded(j);
             matrix[i][j] = w;
+        }
+
+        private void CreateVertexIfNeeded(int number)
+        {
+            if (matrix[number][number] == null)
+            {
+                vertexesAmount++;
+                matrix[number][number] = 0;
+            }
         }
 
         public List<Vertex> GetAdjacentVertexes(int vertexNumber)
@@ -119,6 +112,8 @@ namespace lab05
                 {
                     if (matrix[i][j] != null)
                         Console.Write(matrix[i][j]);
+                    else
+                        Console.Write(".");
                     Console.Write(" ");
                 }
                 Console.WriteLine();
