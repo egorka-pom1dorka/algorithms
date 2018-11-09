@@ -4,3 +4,5 @@
 #### To add edge choose number 3. After that input 2 numbers, which are vertexes numbers of this graph, and edge's weight.
 #### To show grapg choose 4.
 #### To show Prim's results choose 5.
+
+##### In comments I leave graph example.
