@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuringMachine", "TuringMachine\TuringMachine.csproj", "{C0F53929-BA39-4ED0-9C5C-5F56C96CB5C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{5D0241CD-3A49-4FA4-91E5-67F6455CDC4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0F53929-BA39-4ED0-9C5C-5F56C96CB5C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F53929-BA39-4ED0-9C5C-5F56C96CB5C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F53929-BA39-4ED0-9C5C-5F56C96CB5C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F53929-BA39-4ED0-9C5C-5F56C96CB5C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D0241CD-3A49-4FA4-91E5-67F6455CDC4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D0241CD-3A49-4FA4-91E5-67F6455CDC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D0241CD-3A49-4FA4-91E5-67F6455CDC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D0241CD-3A49-4FA4-91E5-67F6455CDC4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE44D2F8-14D1-43E7-A1B0-9C51D092B66F}
+	EndGlobalSection
+EndGlobal
